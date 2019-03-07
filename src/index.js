@@ -58,7 +58,7 @@ const generateCard = async (
     title: {
       field: title_field = "title",
       font: title_font = "DejaVuSansCondensed",
-      color: title_color = "black", // black|white
+      color: title_color = "#555", // black|white
       size: title_size = 48, // 16|24|32|48|64
       style: title_style = "bold", // normal|bold|italic
       x: title_x = null,
@@ -120,6 +120,9 @@ const generateCard = async (
 
 module.exports = ({ markdownNode }, options) => {
   const post = markdownNode.frontmatter;
+  if (!markdownNode.fields) {
+    return;
+  }
 
   const output = path.join(
     "./public",
