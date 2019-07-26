@@ -72,7 +72,7 @@ const generateCard = async (
         { field: "date", format: "mmmm dS" },
       ],
       font: meta_font = "DejaVuSansCondensed",
-      color: meta_color = "black", // black|white
+      color: meta_color = "2080DF", // black|white
       size: meta_size = 24, // 16|24|32|48|64
       style: meta_style = "normal", // normal|bold|italic
       x: meta_x = null,
